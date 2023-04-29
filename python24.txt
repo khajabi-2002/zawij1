@@ -1,0 +1,45 @@
+///
+You are given a string .
+Your task is to print all possible size  replacement combinations of the string in lexicographic sorted order.///
+
+
+code:
+# itertools.combinations_with_replacement() in python - Hacker Rank Solution
+# Python 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# itertools.combinations_with_replacement() in python - Hacker Rank Solution START
+from itertools import combinations_with_replacement
+
+io = input().split();
+char = sorted(io[0]);
+N = int(io[1]);
+
+for i in combinations_with_replacement(char,N):
+    print(''.join(i));
+# itertools.combinations_with_replacement() in python - Hacker Rank Solution END
+
+
+result:
+Input (stdin)
+HACK 2
+Your Output (stdout)
+AA
+AC
+AH
+AK
+CC
+CH
+CK
+HH
+HK
+KK
+Expected Output
+AA
+AC
+AH
+AK
+CC
+CH
+CK
+HH
+HK

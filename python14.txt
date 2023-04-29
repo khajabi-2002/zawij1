@@ -1,0 +1,26 @@
+///Given an integer, , and  space-separated integers as input, create a tuple, , of those  integers. Then compute and print the result of .
+
+Note: hash() is one of the functions in the __builtins__ module, so it need not be imported.///
+
+
+code:
+if __name__ == '__main__':
+
+    n = int(input())
+
+    Tuple1 = map(int, input().split())
+
+    t = tuple(Tuple1)
+
+    print(hash(t));
+
+    
+
+result:
+Input (stdin)
+2
+1 2
+Your Output (stdout)
+3713081631934410656
+Expected Output
+3713081631934410656

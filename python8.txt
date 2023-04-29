@@ -1,0 +1,47 @@
+///You are given a string .
+Your task is to find out if the string  contains: alphanumeric characters, alphabetical characters, digits, lowercase and uppercase characters.///
+
+
+
+code:
+if __name__ == '__main__':
+    s = input()
+
+strr = list(s)
+
+al_num = False
+al = False
+dig = False
+low = False
+upp = False
+
+for i in strr:
+    al_num = al_num or i.isalnum() 
+    al  = al or i.isalpha()
+    dig = dig or i.isdigit()
+    low = low or i.islower()
+    upp = upp or i.isupper()
+
+print(al_num)
+print(al)
+print(dig)
+print(low)
+print(upp)
+
+
+result:
+Input (stdin)
+qA2
+Your Output (stdout)
+True
+True
+True
+True
+True
+Expected Output
+True
+True
+True
+True
+True
+BlogScoringEnvironmentFAQAbout UsSupportCareersTerms Of ServicePrivacy Policy

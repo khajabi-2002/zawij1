@@ -1,0 +1,39 @@
+///You are given a string .
+Your task is to find the indices of the start and end of string  in .///
+
+
+code:
+# Re.start() & Re.end() in Python - Hacker Rank Solution
+# Python 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Re.start() & Re.end() in Python - Hacker Rank Solution START
+import re
+
+S, k = input(), input()
+matches = re.finditer(r'(?=(' + k + '))', S)
+
+anymatch = False
+for match in matches:
+    anymatch = True
+    print((match.start(1), match.end(1) - 1))
+
+if anymatch == False:
+    print((-1, -1))
+# Re.start() & Re.end() in Python - Hacker Rank Solution END
+
+
+
+
+result:
+Input (stdin)
+aaadaa
+aa
+Your Output (stdout)
+(0, 1)
+(1, 2)
+(4, 5)
+Expected Output
+(0, 1)
+(1, 2)
+(4, 5)
+BlogScoringEnvironmentFAQAbout UsSupportCareersTerms Of Service

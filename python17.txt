@@ -1,0 +1,41 @@
+///You are given a string . It consists of alphanumeric characters, spaces and symbols(+,-).
+Your task is to find all the substrings of  that contains  or more vowels.
+Also, these substrings must lie in between  consonants and should contain vowels only.
+
+Note :
+Vowels are defined as: AEIOU and aeiou.
+Consonants are defined as: QWRTYPSDFGHJKLZXCVBNM and qwrtypsdfghjklzxcvbnm.///
+
+
+
+code:
+# Re.findall() & Re.finditer() in Python - Hacker Rank Solution
+# Python 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Re.findall() & Re.finditer() in Python - Hacker Rank Solution START
+import re
+
+Storage = re.findall(r'(?<=[qwrtypsdfghjklzxcvbnm])([aeiou]{2,})(?=[qwrtypsdfghjklzxcvbnm])', input().strip(), re.IGNORECASE)
+
+if Storage:
+    for i in Storage:
+        print(i)
+else:
+    print(-1)
+# Re.findall() & Re.finditer() in Python - Hacker Rank Solution END
+
+
+
+result:
+Input (stdin)
+rabcdeefgyYhFjkIoomnpOeorteeeeet
+Your Output (stdout)
+ee
+Ioo
+Oeo
+eeeee
+Expected Output
+ee
+Ioo
+Oeo
+eeeee

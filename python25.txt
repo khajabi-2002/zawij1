@@ -1,0 +1,28 @@
+///In this task, we would like for you to appreciate the usefulness of the groupby() function of itertools . To read more about this function, Check this out .
+
+You are given a string . Suppose a character '' occurs consecutively  times in the string. Replace these consecutive occurrences of the character '' with  in the string.
+
+For a better understanding of the problem, check the explanation.///
+
+
+code:
+# Compress the String in python - Hacker Rank Solution
+# Python 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Compress the String in python - Hacker Rank Solution START
+from itertools import *
+
+io = input()
+for i,j in groupby(map(int,list(io))):
+    print(tuple([len(list(j)), i]) ,end = " ")
+
+# Compress the String in python - Hacker Rank Solution END
+
+
+result:
+Input (stdin)
+1222311
+Your Output (stdout)
+(1, 1) (3, 2) (1, 3) (2, 1) 
+Expected Output
+(1, 1) (3, 2) (1, 3) (2, 1)

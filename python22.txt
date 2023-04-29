@@ -1,0 +1,49 @@
+///You are given a string .
+Your task is to print all possible permutations of size  of the string in lexicographic sorted order.///
+
+
+code:
+# itertools.permutations() in Python - Hacker Rank Solution
+# Python 3
+# itertools.permutations() in Python - Hacker Rank Solution START
+from itertools import permutations
+
+s,k = input().split()
+
+words = list(permutations(s,int(k)))
+words = sorted(words, reverse=False)
+for word in words:
+    print(*word,sep='')
+# itertools.permutations() in Python - Hacker Rank Solution END
+
+
+
+result:
+Input (stdin)
+HACK 2
+Your Output (stdout)
+AC
+AH
+AK
+CA
+CH
+CK
+HA
+HC
+HK
+KA
+KC
+KH
+Expected Output
+AC
+AH
+AK
+CA
+CH
+CK
+HA
+HC
+HK
+KA
+KC
+KH
