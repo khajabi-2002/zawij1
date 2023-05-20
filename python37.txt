@@ -1,0 +1,38 @@
+///You are given  words. Some words may repeat. For each word, output its number of occurrences. The output order should correspond with the input order of appearance of the word. See the sample input/output for clarification.
+
+Note: Each input line ends with a "\n" character.
+
+Constraints:
+
+The sum of the lengths of all the words do not exceed 
+All the words are composed of lowercase English letters only.///
+
+
+code:
+# importing module
+from collections import Counter
+
+integer1 = int(input())
+lst = [list(map(str, input().split())) for _ in range(integer1)]
+
+words = [x[0] for x in lst]
+
+print(len(Counter(words).keys()))
+val = list(Counter(words).values())
+listToStr = ' '.join([str(elem) for elem in val])
+print(listToStr) 
+
+
+output:
+nput (stdin)
+4
+bcdef
+abcdefg
+bcde
+bcdef
+Your Output (stdout)
+3
+2 1 1
+Expected Output
+3
+2 1 1

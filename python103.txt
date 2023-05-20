@@ -1,0 +1,61 @@
+///You are given a text of  lines. The text contains && and || symbols.
+Your task is to modify those symbols to the following:
+
+&& → and
+|| → or
+Both && and || should have a space " " on both sides.///
+
+
+
+
+code:
+# importing the module
+import re
+
+# using for loop
+for i in range(int(input())):
+    
+    # using re.sub method and taking input
+    s = re.sub("(?<=\s)&&(?=\s)", "and", input())
+    
+    #printing the required output
+    print(re.sub("(?<=\s)\|\|(?=\s)", "or", s))
+
+
+
+
+output:
+Input (stdin)
+11
+a = 1;
+b = input();
+if a + b > 0 && a - b < 0:
+    start()
+elif a*b > 10 || a/b < 1:
+    stop()
+print set(list(a)) | set(list(b))
+#Note do not change &&& or ||| or & or |
+#Only change those '&&' which have space on both sides.
+#Only change those '|| which have space on both sides.
+Your Output (stdout)
+a = 1;
+b = input();
+if a + b > 0 and a - b < 0:
+    start()
+elif a*b > 10 or a/b < 1:
+    stop()
+print set(list(a)) | set(list(b))
+#Note do not change &&& or ||| or & or |
+#Only change those '&&' which have space on both sides.
+#Only change those '|| which have space on both sides.
+Expected Output
+a = 1;
+b = input();
+if a + b > 0 and a - b < 0:
+    start()
+elif a*b > 10 or a/b < 1:
+    stop()
+print set(list(a)) | set(list(b))
+#Note do not change &&& or ||| or & or |
+#Only change those '&&' which have space on both sides.
+#Only change those '|| which have space on both sides.

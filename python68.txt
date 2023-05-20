@@ -1,0 +1,33 @@
+///You are given three integers: , , and . Print two lines.
+On the first line, print the result of pow(a,b). On the second line, print the result of pow(a,b,m).///
+
+
+
+code:
+# Power and Mod Power in Python - HackerRank Solution
+# Python 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Power and Mod Power in Python - Hacker Rank Solution START
+a = int(input())
+b = int(input())
+m = int(input())
+
+print(pow(a,b))
+
+print(pow(a,b,m))
+# Power and Mod Power in Python - Hacker RankSolution END
+
+
+
+output:
+Input (stdin)
+3
+4
+5
+Your Output (stdout)
+81
+1
+Expected Output
+81
+1
+BlogScoringEnvironmentFAQAbout UsSupportCareersTerms Of Service

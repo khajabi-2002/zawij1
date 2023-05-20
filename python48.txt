@@ -1,0 +1,33 @@
+///You are given a polynomial  of a single indeterminate (or variable), .
+You are also given the values of  and . Your task is to verify if .
+
+Constraints
+All coefficients of polynomial  are integers.
+ and  are also integers.///
+
+
+
+code:
+s = input() # read input
+# s = "1 4";
+f = input()
+# f = "x^3 + x^2 + x + 1"
+(x,y) = s.split() # args
+x=int(x)
+y=int(y)
+# print (x, y)
+z=eval(f)
+if (z == y):
+    print ("True")
+else:
+    print ("False")
+
+
+output:
+Input (stdin)
+1 4
+x**3 + x**2 + x + 1
+Your Output (stdout)
+True
+Expected Output
+True

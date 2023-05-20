@@ -1,0 +1,26 @@
+///Read in two integers,  and , and print three lines.
+The first line is the integer division  (While using Python2 remember to import division from __future__).
+The second line is the result of the modulo operator: .
+The third line prints the divmod of  and .///
+
+
+
+code:
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Mod Divmod in Python - Hacker Rank Solution START
+a = int(input());
+b = int(input());
+print(a//b);
+print(a%b);
+print(divmod(a,b));
+# Mod Divmod in Python - Hacker Rank Solution ENDInput (stdin)
+177
+10
+Your Output (stdout)
+17
+7
+(17, 7)
+Expected Output
+17
+7
+(17, 7)

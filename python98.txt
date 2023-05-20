@@ -1,0 +1,24 @@
+///You are given the coefficients of a polynomial .
+Your task is to find the value of  at point .///
+
+
+
+code:
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+a = list(map(float, input().split()))
+x = float(input())
+
+print(sum([y*x**(len(a)-1-i) for i,y in enumerate(a)]))
+
+
+
+
+output:
+Input (stdin)
+1.1 2 3
+0
+Your Output (stdout)
+3.0
+Expected Output
+3.0

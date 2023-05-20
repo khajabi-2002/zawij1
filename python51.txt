@@ -1,0 +1,41 @@
+///You are given a space separated list of integers. If all the integers are positive, then you need to check if any integer is a palindromic integer.///
+
+
+code:
+# Any or All in python - Hacker Rank Solution
+# Python 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Any or All in python - Hacker Rank Solution START
+def isPositive(i):
+    if i > 0:
+        return True
+    return False
+
+def isPalindrome(i):
+    if int(str(i)[::-1]) is i:
+        return True
+    return False
+
+N = int(input())
+storage = map(int, input().split())
+storage = sorted(storage)
+
+if all([isPositive(i) for i in storage]):
+    if any([isPalindrome(i) for i in storage]):
+        print("True")
+    else:
+        print("False")
+else:
+    print("False")
+# Any or All in python - Hacker Rank Solution END
+
+
+
+output:
+Input (stdin)
+5
+12 9 61 5 14
+Your Output (stdout)
+True
+Expected Output
+True

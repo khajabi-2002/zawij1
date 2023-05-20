@@ -1,0 +1,25 @@
+///You are given a space separated list of nine integers. Your task is to convert this list into a X NumPy array.///
+
+
+
+code:
+# Shape and Reshape in Python - Hacker Rank Solution
+# Python 3
+import numpy
+# Shape and Reshape in Python - Hacker Rank Solution START
+print(numpy.array(input().split(), int).reshape(3, 3))
+# Shape and Reshape in Python - Hacker Rank Solution END
+
+
+
+output:
+Input (stdin)
+1 2 3 4 5 6 7 8 9
+Your Output (stdout)
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+Expected Output
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]

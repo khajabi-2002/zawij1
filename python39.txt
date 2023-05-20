@@ -1,0 +1,36 @@
+///You are given two values  and .
+Perform integer division and print .///
+
+
+code:
+# Exceptions in Python - Hacker Rank Solution
+# Python 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Exceptions in Python - Hacker Rank Solution START
+x = int(input());
+for i in range(x):
+    try:
+        a, b = input().split()
+        print(int(a)//int(b))
+    except ZeroDivisionError as e:
+        print("Error Code:",e);
+    except ValueError as v:
+        print("Error Code:",v);
+# Exceptions in Python - Hacker Rank Solution END
+
+
+
+output:
+Input (stdin)
+3
+1 0
+2 $
+3 1
+Your Output (stdout)
+Error Code: integer division or modulo by zero
+Error Code: invalid literal for int() with base 10: '$'
+3
+Expected Output
+Error Code: integer division or modulo by zero
+Error Code: invalid literal for int() with base 10: '$'
+3

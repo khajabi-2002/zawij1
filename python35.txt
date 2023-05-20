@@ -1,0 +1,44 @@
+///Dr. John Wesley has a spreadsheet containing a list of student's , ,  and .
+
+Your task is to help Dr. Wesley calculate the average marks of the students.
+
+
+Note:
+1. Columns can be in any order. IDs, marks, class and name can be written in any order in the spreadsheet.
+2. Column names are ID, MARKS, CLASS and NAME. (The spelling and case type of these names won't change.)///
+
+
+code:
+# Collections.namedtuple() in Python - Hacker Rank Solution
+# Python 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Collections.namedtuple() in Python - Hacker Rank Solution START
+import collections
+
+n = int(input())
+scol = ','.join(input().split())
+Student = collections.namedtuple('Student',scol)
+
+sum = 0
+for i in range(n):
+    row = input().split()
+    student = Student(*row)
+    sum += int(student.MARKS)
+
+print(sum/n)
+# Collections.namedtuple() in Python - Hacker Rank Solution END
+
+
+output:
+Input (stdin)
+5
+ID         MARKS      NAME       CLASS
+1          97         Raymond    7
+2          50         Steven     4
+3          91         Adrian     9
+4          72         Stewart    5
+5          80         Peter      6
+Your Output (stdout)
+78.0
+Expected Output
+78.00

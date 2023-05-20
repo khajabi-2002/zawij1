@@ -1,0 +1,32 @@
+///You are given two arrays  and . Both have dimensions of X.
+Your task is to compute their matrix product.///
+
+
+
+code:
+# Dot and Cross in Python - Hacker Rank Solution
+# Python 3
+# Dot and Cross in Python - Hacker Rank Solution START
+import numpy
+
+n = int(input())
+a = numpy.array([input().split() for _ in range(n)], int)
+b = numpy.array([input().split() for _ in range(n)], int)
+print(numpy.dot(a, b))
+# Dot and Cross in Python - Hacker Rank Solution END
+
+
+
+output:
+Input (stdin)
+2
+1 2
+3 4
+1 2
+3 4
+Your Output (stdout)
+[[ 7 10]
+ [15 22]]
+Expected Output
+[[ 7 10]
+ [15 22]]

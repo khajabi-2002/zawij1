@@ -1,0 +1,24 @@
+///You are given a square matrix  with dimensions X. Your task is to find the determinant. Note: Round the answer to 2 places after the decimal.///
+
+
+
+code:
+# Linear Algebra in Python - Hacker Rank Solution
+# Python 3
+# Linear Algebra in Python - Hacker Rank Solution START
+import numpy
+N = int(input())
+A = numpy.array([input().split() for _ in range(N)], float)
+print(round(numpy.linalg.det(A),2))
+# Linear Algebra in Python - Hacker Rank Solution END
+
+
+output:
+Input (stdin)
+2
+1.1 1.1
+1.1 1.1
+Your Output (stdout)
+0.0
+Expected Output
+0.0

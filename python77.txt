@@ -1,0 +1,59 @@
+///You are given the shape of the array in the form of space-separated integers, each integer representing the size of different dimensions,
+ your task is to print an array of the given shape and integer type using the tools numpy.
+zeros and numpy.ones.///
+
+
+
+code:'
+# Zeros and Ones in Python - Hacker Rank Solution
+# Python 3
+# Zeros and Ones in Python - Hacker Rank Solution START
+import numpy
+
+N = tuple(map(int, input().split()))
+print(numpy.zeros(N, int))
+print(numpy.ones(N, int))
+# Zeros and Ones in Python - Hacker Rank Solution END
+
+
+
+
+output:
+Input (stdin)
+3 3 3
+Your Output (stdout)
+[[[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]]
+[[[1 1 1]
+  [1 1 1]
+  [1 1 1]]
+ [[1 1 1]
+  [1 1 1]
+  [1 1 1]]
+ [[1 1 1]
+  [1 1 1]
+  [1 1 1]]]
+Expected Output
+[[[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]]
+[[[1 1 1]
+  [1 1 1]
+  [1 1 1]]
+ [[1 1 1]
+  [1 1 1]
+  [1 1 1]]
+ [[1 1 1]{-truncated-}

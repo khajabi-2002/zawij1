@@ -1,0 +1,21 @@
+///The calendar module allows you to output calendars and provides additional useful functions for them.
+
+class calendar.TextCalendar([firstweekday])
+
+This class can be used to generate plain text calendars.///
+
+
+code:
+import calendar
+month, day, year = list(map(int,input().split()))
+ans = calendar.weekday(year, month, day)
+print((calendar.day_name[ans]).upper())
+
+
+output:
+Input (stdin)
+08 05 2015
+Your Output (stdout)
+WEDNESDAY
+Expected Output
+WEDNESDAY

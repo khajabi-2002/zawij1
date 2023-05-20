@@ -1,0 +1,43 @@
+///You are given two integer arrays of size X and X ( &  are rows, and  is the column). Your task is to concatenate the arrays along axis .///
+
+
+
+code:
+# Concatenate in Python - Hacker Rank Solution
+# Python 3
+# Concatenate in Python - Hacker Rank Solution START
+import numpy
+P, N, M = map(int,input().split())
+A = numpy.array([input().split() for _ in range(P)],int)
+B = numpy.array([input().split() for _ in range(N)],int)
+print(numpy.concatenate((A, B), axis = 0))
+# Concatenate in Python - Hacker Rank Solution END
+
+
+
+output:
+Input (stdin)
+4 3 2
+1 2
+1 2
+1 2
+1 2
+3 4
+3 4
+3 4
+Your Output (stdout)
+[[1 2]
+ [1 2]
+ [1 2]
+ [1 2]
+ [3 4]
+ [3 4]
+ [3 4]]
+Expected Output
+[[1 2]
+ [1 2]
+ [1 2]
+ [1 2]
+ [3 4]
+ [3 4]
+ [3 4]]

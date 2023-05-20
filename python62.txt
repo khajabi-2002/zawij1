@@ -1,0 +1,47 @@
+///ABCXYZ company has up to  employees.
+The company decides to create a unique identification number (UID) for each of its employees.
+The company has assigned you the task of validating all the randomly generated UIDs.
+
+A valid UID must follow the rules below:
+
+It must contain at least  uppercase English alphabet characters.
+It must contain at least  digits ( - ).
+It should only contain alphanumeric characters ( - ,  -  &  - ).
+No character should repeat.
+There must be exactly  characters in a valid UID.///
+
+
+
+code:
+# Validating UID in Python - Hacker Rank Solution
+# Python 3
+# Validating UID in Python - Hacker Rank Solution START
+import re
+
+for i in range(int(input())):
+    N = input().strip()
+    if N.isalnum() and len(N) == 10:
+        if bool(re.search(r'(.*[A-Z]){2,}',N)) and bool(re.search(r'(.*[0-9]){3,}',N)):
+            if re.search(r'.*(.).*\1+.*',N):
+                print('Invalid')
+            else:
+                print('Valid')
+        else:
+            print('Invalid')
+    else:
+        print('Invalid')
+# Validating UID in Python - Hacker Rank Solution END
+
+
+
+output:
+Input (stdin)
+2
+B1CD102354
+B1CDEF2354
+Your Output (stdout)
+Invalid
+Valid
+Expected Output
+Invalid
+Valid

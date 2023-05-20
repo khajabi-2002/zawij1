@@ -1,0 +1,55 @@
+///You are given  lines of CSS code. Your task is to print all valid Hex Color Codes, in order of their occurrence from top to bottom.
+
+CSS Code Pattern
+
+Selector
+{
+	Property: Value;
+}///
+
+
+
+
+code:
+# Hex Color Code in Python - Hacker Rank Solution
+# Python 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Hex Color Code in Python - Hacker Rank Solution START
+import re
+
+T = int(input())
+in_css = False
+for _ in range(T):
+    s = input()
+    if '{' in s:
+        in_css = True
+    elif '}' in s:
+        in_css = False
+    elif in_css:
+        for color in re.findall('#[0-9a-fA-F]{3,6}', s):
+            print(color)
+# Hex Color Code in Python - Hacker Rank Solution END
+
+
+
+
+output:
+Input (stdin)
+11
+#BED
+{
+    color: #FfFdF8; background-color:#aef;
+    font-size: 123px;
+}
+#Cab
+{
+    background-color: #ABC;
+    border: 2px dashed #fff;
+}
+Your Output (stdout)
+#FfFdF8
+#aef
+#ABC
+#fff
+Expected Output
+#FfFdF8

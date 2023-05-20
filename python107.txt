@@ -1,0 +1,32 @@
+///You are given a 2-D array of size X.
+Your task is to find:
+
+The mean along axis 
+The var along axis 
+The std along axis ///
+
+
+
+code:
+import numpy
+N,M = map(int, input().split(" "))
+A = numpy.array([input().split() for _ in range(N)],int)
+print(numpy.mean(A, axis = 1))
+print(numpy.var(A, axis = 0))
+print(round(numpy.std(A, axis = None),11))
+
+
+
+output:
+Input (stdin)
+2 2
+1 2
+3 4
+Your Output (stdout)
+[1.5 3.5]
+[1. 1.]
+1.11803398875
+Expected Output
+[1.5 3.5]
+[1. 1.]
+1.11803398875
